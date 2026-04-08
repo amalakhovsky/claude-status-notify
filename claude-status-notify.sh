@@ -7,7 +7,7 @@ NOTIFY_NOW=0
 
 usage() {
     cat <<'EOF'
-Usage: claude_status_check.sh [--notify-now|-n]
+Usage: claude-status-notify.sh [--notify-now|-n]
 
 Options:
   -n, --notify-now   Force notifications for current component states
