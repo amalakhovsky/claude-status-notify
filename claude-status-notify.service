@@ -3,4 +3,4 @@ Description=Check Claude service status
 
 [Service]
 Type=oneshot
-ExecStart=%h/bin/check-claude-status.sh
+ExecStart=%h/bin/claude-status-notify.sh
