@@ -83,10 +83,12 @@ git clone https://github.com/amalakhovsky/claude-status-notify.git
 cd claude-status-notify
 ```
 
-Make the script executable:
+Make the script executable and copy it to `~/bin/`:
 
 ```bash
 chmod +x claude-status-notify.sh
+mkdir -p ~/bin
+cp claude-status-notify.sh ~/bin/
 ```
 
 Create the user systemd directory if needed:
@@ -100,12 +102,6 @@ Copy the unit files into place:
 ```bash
 cp claude-status-notify.service ~/.config/systemd/user/
 cp claude-status-notify.timer ~/.config/systemd/user/
-```
-
-Edit the service file if needed so `ExecStart=` points to the full path of the script in your clone, for example:
-
-```ini
-ExecStart=/home/YOUR_USER/path/to/claude-status-notify/claude-status-notify.sh
 ```
 
 Reload and enable the timer:
